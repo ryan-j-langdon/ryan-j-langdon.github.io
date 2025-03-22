@@ -1,3 +1,22 @@
+/* /Components/Button.razor.rz.scp.css */
+button[b-yjquoi4oxo] {
+    padding: 2px 15px;
+    font-size: clamp(25px, 5vw, 3.2rem);
+    color: var(--button-text-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    transition: 200ms transform;
+    user-select: none;
+    white-space: nowrap;
+}
+
+@media (pointer: fine) {
+    button:hover[b-yjquoi4oxo] {
+        cursor: pointer;
+        transform: translateY(-2px);
+    }   
+}
 /* /Components/GameBoard.razor.rz.scp.css */
 .container[b-31qm0wnvnq] {
     display: flex;
@@ -8,10 +27,16 @@
 #gameState[b-31qm0wnvnq] {
     font-size: max(30px, min(5vh, 5vw));
     color: var(--text-color);
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    text-align: center;
+    /* TODO remove */
     /* animation: flip 1s ease-in-out; */
     /* transform-style: preserve-3d; */
     /* transform: rotateY(180deg); */
+}
+
+#difficulty[b-31qm0wnvnq] {
+    color: var(--subtle-text-color);
 }
 
 #gameBoard[b-31qm0wnvnq] {
@@ -23,7 +48,7 @@
     
     width: 100%;
     max-width: 60vmin;
-    min-width: 300px;
+    min-width: 325px;
 }
 
 .O[b-31qm0wnvnq] {
@@ -41,8 +66,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-right: 2px solid;
-    border-bottom: 2px solid;
+    border-right: 0.15vmax solid;
+    border-bottom: 0.15vmax solid;
     border-color: var(--gameboard-color);
     min-width: 0;
     min-height: 0;
@@ -83,23 +108,6 @@
         transform: rotateY(180deg);
     }
 } */
-/* /Components/MainMenuButton.razor.rz.scp.css */
-button[b-2a59jky89f] {
-    padding: 2px 15px;
-    font-size: 30px;
-    color: var(--button-text-color);
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 10px;
-    transition: 200ms transform;
-    margin-bottom: 20px;
-    user-select: none;
-}
-
-button:hover[b-2a59jky89f] {
-    cursor: pointer;
-    transform: translateY(-2px);
-}
 /* /Components/MainPage.razor.rz.scp.css */
 .container[b-p97zg49k8g] {
     display: flex;
@@ -109,18 +117,13 @@ button:hover[b-2a59jky89f] {
 }
 
 #buttons[b-p97zg49k8g] {
+    margin-top: 1rem;
     display: flex;
-    gap: 20px;
+    gap: 1rem;
 }
 /* /Components/MenuWizard.razor.rz.scp.css */
-/* TODO remove*/
-#comingSoon[b-896yffllyx] {
-    color: var(--text-color);
-    text-align: center;
-}
-
 .heading[b-896yffllyx] {
-    font-size: 40px;
+    font-size: clamp(30px, 8vw, 4rem);
     font-weight: 500;
     color: var(--text-color);
     text-align: center;
@@ -133,59 +136,21 @@ button:hover[b-2a59jky89f] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-button[b-896yffllyx] {
-    padding: 2px 15px;
-    font-size: 30px;
-    color: var(--button-text-color);
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 10px;
-    transition: 200ms transform;
-    margin-bottom: 20px;
-    user-select: none;
-}
-
-button:hover[b-896yffllyx] {
-    cursor: pointer;
-    transform: translateY(-2px);
-}
-
-#backButton[b-896yffllyx] {
-    margin-top: 20px;
-    background-color: grey;
-}
-/* /Components/RestartButton.razor.rz.scp.css */
-button[b-a0f9z5itre] {
-    padding: 2px 15px;
-    font-size: 30px;
-    color: var(--button-text-color);
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 10px;
-    transition: 200ms transform;
-    margin-bottom: 20px;
-    user-select: none;
-}
-
-button:hover[b-a0f9z5itre] {
-    cursor: pointer;
-    transform: translateY(-2px);
+    gap: 1rem;
 }
 /* /Layout/MainLayout.razor.rz.scp.css */
 #title[b-wxb3zju82g] {
     color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    font-size: 2.3rem;
+    font-size: clamp(32px, 8vw, 2.8rem);
 }
 
 #author[b-wxb3zju82g] {
     color: var(--subtle-text-color);
-    font-size: 1rem;
-    margin-top: -8px;
-    margin-left: 4px;
+    margin-left: 5px;
+    margin-top: -15px;
+    /* font-size: clamp(12px, 3vw, 1.2rem); */
+    /* margin-top: clamp(-15px, -3vw, 0px);
+    margin-left: 5px; */
 }
 
 .nowrap[b-wxb3zju82g] {
@@ -193,11 +158,12 @@ button:hover[b-a0f9z5itre] {
 }
 
 .top-row[b-wxb3zju82g] {
+    padding-left: max(5px, .5vw);
+    padding-right: max(5px, .5vw);
     background-color: var(--top-header-color);
-    border-bottom: 1px solid black;
-    height: 4rem;
+    border-bottom: 0.1vh solid black;
+    height: max(70px, 8vh);
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -205,21 +171,25 @@ button:hover[b-a0f9z5itre] {
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    white-space: nowrap;
 }
 
 .right-side[b-wxb3zju82g] {
+    font-size: clamp(10px, 3.5vw, 1.5rem);
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    flex-grow: 1;
     text-align: center;
     width: fit-content;
-    gap: .5rem;
+    gap: 1.5vw;
 }
 
 @media (max-width: 425px) {
     .right-side[b-wxb3zju82g] {
-        gap: 5px;
+        gap: 0.4vh;
     }
 }
     

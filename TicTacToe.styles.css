@@ -1,7 +1,7 @@
 /* /Components/Button.razor.rz.scp.css */
 button[b-yjquoi4oxo] {
     padding: 2px 15px;
-    font-size: clamp(25px, 5vw, 3.2rem);
+    font-size: clamp(2.5rem, 5vw, 3rem);
     color: var(--button-text-color);
     background-color: var(--primary-color);
     border: none;
@@ -117,13 +117,13 @@ button[b-yjquoi4oxo] {
 }
 
 #buttons[b-p97zg49k8g] {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     display: flex;
     gap: 1rem;
 }
 /* /Components/MenuWizard.razor.rz.scp.css */
 .heading[b-896yffllyx] {
-    font-size: clamp(30px, 8vw, 4rem);
+    font-size: clamp(3rem, 8vw, 4rem);
     font-weight: 500;
     color: var(--text-color);
     text-align: center;
